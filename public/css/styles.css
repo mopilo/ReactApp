@@ -1,0 +1,90 @@
+body{
+    margin: 0;
+    padding: 0;
+    color: #1b1b1b;
+    font-family: 'Roboto'; /* change to roboto*/
+}
+
+.flexbox-container{
+    display: -webkit-flex;
+    display: flex;
+    display: -ms-flex
+}
+a{
+    text-decoration: none
+}
+
+/* fjalla one */
+h3{
+    font-family: 'Fjalla One';
+    font-size: 35px;
+    font-weight: 300;
+    margin-bottom: 0 
+}
+
+h4 {
+    font-family: 'Fjalla One';
+    font-size: 20;
+    margin: 15px 0 5px
+}
+
+/* header */
+header {
+    border-bottom: 1px solid #e2e2e2
+}
+
+header, footer {
+    background: #fff;
+    font-family: 'Fjalla One' ;
+    align-items: center;
+    padding: 10px
+}
+
+header .logo, footer .logo {
+    flex-grow: 1;
+    height: 22px;
+}
+
+/* images */
+
+header .logo span, footer .logo span {
+    background: url('/images/logo.png') no-repeat;
+    display: inline-block;
+    width: 58px;
+    height: 28px
+}
+
+footer{
+    background: #000000;
+    margin-top: 30px
+}
+
+/* sliders */
+
+.item-slider {
+    height: 700px;
+    background-size: cover !important;
+    background-position: center center;
+    position: relative;
+    font-family: 'Fjalla One' ;
+}
+
+.item-slider .caption {
+    color: #000;
+    position: absolute;
+    right: 0;
+    padding: 20px;
+    text-align: right;
+    width: 320px;
+    text-transform: capitalize
+}
+
+.item-slider .caption  h4{
+    margin: 0;
+    font-weight: 300
+}
+
+.item-slider .caption p {
+    font-size: 70px;
+    margin-top: 0px 
+}
