@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 
 // components
 import Featured from './Featured'
+import Subscriptions from './Subscriptions'
+
 
 const urlHome = 'http://localhost:3004/home'
 class Home extends Component{
@@ -31,6 +33,7 @@ class Home extends Component{
         return(
             <div>
                 <Featured slides={this.state.home.slider}/>
+                <Subscriptions/> 
             </div>
         )
     }
