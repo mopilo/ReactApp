@@ -7,9 +7,21 @@ export default class Subscriptions extends Component {
     constructor(props){
         super(props);
         this.state = {
-            email: ''
+            email: '',
+            error: false,
+            success: false
         }
     }
+
+    clearMsg = () => {
+        setTimeout(function(){
+            this.setState({
+                error: false, 
+                success: false
+            })
+        }.bind(this), 3000)
+    }
+
 
     onChangeInput = (e) => {
         this.setState({email: e.target.value})
@@ -23,8 +35,11 @@ export default class Subscriptions extends Component {
             this.saveEmail(email)
          }
          else{
-             
+             this.setState({
+                 error: true
+             })
          }
+         this.clearMsg()
     }
 
     saveEmail = (email) => {
@@ -40,7 +55,10 @@ export default class Subscriptions extends Component {
         })
         .then(res=> res.json())
         .then(resp=> {
-            this.setState({email: ''})
+            this.setState({
+                email: '',
+                success: true
+            })
         })
     }
 
@@ -55,8 +73,9 @@ export default class Subscriptions extends Component {
                         placeholder="your@email.com"
                         value = {this.state.email}
                         onChange = {this.onChangeInput}
-                    >
-                    </input>
+                    />
+                    <div className={this.state.error ? "error show" : "error"}>Check your mail</div>
+                    <div className={this.state.success ? "success show" : "success "}>Thank You</div>
                 </form>
             </div>
             <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
