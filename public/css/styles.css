@@ -61,15 +61,15 @@ footer{
 
 /* sliders */
 
-.item-slider {
+.item_slider {
     height: 700px;
     background-size: cover !important;
-    background-position: center center;
+    background-position: center center !important;
     position: relative;
     font-family: 'Fjalla One' ;
 }
 
-.item-slider .caption {
+.item_slider .caption {
     color: #000;
     position: absolute;
     right: 0;
@@ -79,12 +79,12 @@ footer{
     text-transform: capitalize
 }
 
-.item-slider .caption  h4{
+.item_slider .caption  h4{
     margin: 0;
     font-weight: 300
 }
 
-.item-slider .caption p {
+.item_slider .caption p {
     font-size: 70px;
     margin-top: 0px 
 }
@@ -137,3 +137,51 @@ footer{
 .subscribe-panel .success.show {
     display: block;
 }
+
+
+/* BLOCKS */
+
+.home_blocks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 40px
+}
+
+.home_blocks .item {
+    flex-grow: 1;
+    position: relative;
+    height: 270px;
+    overflow: hidden;
+}
+
+.home_blocks .item.lg {
+    width: 50%
+}
+
+.home_blocks .item.md {
+    width: 30%
+}
+
+.home_blocks .item.sm {
+    width: 20%
+}
+
+.home_blocks .item .image{
+    height: 270px;
+    background-position: center center !important;
+    background-size: cover !important 
+}
+
+.home_blocks .item .link {
+    background: #000;
+    padding: 10px;
+    transition: all 500ms ease-in-out;
+}
+
+
+.home_blocks .item:hover .link{
+    transform: translate(0px, -39px);
+    transition: all 500ms ease-in-out;
+}
+
